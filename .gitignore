@@ -6,6 +6,7 @@
 *.lo
 *.o
 *.obj
+**/obj_dir/
 
 # Precompiled Headers
 *.gch
