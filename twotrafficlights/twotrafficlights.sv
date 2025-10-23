@@ -18,8 +18,8 @@ module twotrafficlights(
 
   always_comb begin
     flip = state[2];
-    a = 3'b001;
-    b = {state[0] && !state[1], !state[0], !(state[0] ^ state[1])};
+    a = 3'b100;
+    b = {!(state[0] ^ state[1]), !state[0], state[0] && !state[1]};
     {lightsA, lightsB} = flip ? {b, a} : {a, b};
   end
 
